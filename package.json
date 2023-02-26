@@ -1,0 +1,33 @@
+{
+  "name": "koa2-demo",
+  "version": "1.0.0",
+  "author": "xchenjwr",
+  "private": true,
+  "scripts": {
+    "start": "cross-env NODE_ENV=dev nodemon ./bin/www",
+    "dev": "cross-env NODE_ENV=dev pm2 start ecosystem.config.js --watch",
+    "test": "cross-env NODE_ENV=test mocha ./test/index.test.js",
+    "pro": "cross-env NODE_ENV=pro pm2 start ecosystem.config.js",
+    "logs": "pm2 logs",
+    "stop": "pm2 stop ecosystem.config.js"
+  },
+  "dependencies": {
+    "jsonwebtoken": "^9.0.0",
+    "koa": "^2.14.1",
+    "koa-body": "^6.0.1",
+    "koa-helmet": "^6.1.0",
+    "koa-parameter": "^3.0.1",
+    "koa-router": "^12.0.0",
+    "koa-static": "^5.0.0",
+    "koa2-cors": "^2.0.6",
+    "log4js": "^6.8.0",
+    "mysql2": "^3.1.2",
+    "sequelize": "^6.28.0"
+  },
+  "devDependencies": {
+    "chai": "^4.3.7",
+    "cross-env": "^7.0.3",
+    "mocha": "^10.2.0",
+    "supertest": "^6.3.3"
+  }
+}
